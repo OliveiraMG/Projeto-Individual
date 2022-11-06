@@ -76,7 +76,7 @@ body {
 }
 
 .logonavbar ul a {
-    color: white;
+    color: #dca93f;
     text-decoration: none;
     font-size: 14px;
     width: 130%;
@@ -88,14 +88,15 @@ body {
 
 ul a:hover {
     
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px #dca93f;
 }
 
 .header .fakebutton {
     width: 127px;
     height: 28px;
-    background-color: transparent;
+    background-color:#350c74;
     color: white;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,7 +123,7 @@ ul a:hover {
     align-items: center;
     margin-top: 4rem;
     background-image: linear-gradient(240deg, #ef9c4f, #ff912b);
-    border-radius: 0px 0px 180px 0px;
+    border-radius: 180px 0px 180px 0px;
 }
 
 /* BANNER */
@@ -200,24 +201,35 @@ ul a:hover {
 
 /* NOTÍCIAS */
 
+#noticiasPosicao {
+    border-radius: 280px 0px 180px 0px;
+    background-image: linear-gradient(240deg, #ef9c4f, #ff912b);
+}
+
 #cabecalho {
-    height: 50px;
+    height: 100px;
+    background-color:#3a125f;
+    display: flex;
+    justify-content: center;
 }
 
 #title {
     font-size: 40px;
     display: flex;
-    justify-content: left;
-    padding-top: 20px;
+    justify-content: center;
+    margin-top: 25px;
+    color: #dca93f;
 }
 
 .linha {
     height: 5px;
     background-color: #dca93f;
-    width: 50.5%;
-    float: right;
-    padding-top: 5px;
+    width: 36.8%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 47px;
 }
+
 
 .bloconews {
     padding-top: 100px;
@@ -230,7 +242,7 @@ ul a:hover {
     background-size: cover;
     background-position: center;
     float: left;
-    margin-left: 40px;
+    margin-left: 80px;
     cursor: pointer;
     border-radius: 5px;
     transform: scale(1);
@@ -244,21 +256,13 @@ ul a:hover {
     transition: 0.5s;
 }
 
-.manchete1 {
-    color: white;
-    margin-top: 400px;
-    margin-left: 20px;
-    text-shadow: 2px 2px 2px black;
-}
-
 .noticia2 {
-    width: 50%;
-    height: 10%;
-    background-image: url("../assets/JaMorant.jpeg");
+    width: 30%;
+    background-image: url("../assets/CavaliersXCeltics.jpeg");
     background-size: cover;
     background-position: center;
     float: right;
-    margin-right: 30px;
+    margin-right: 100px;
     cursor: pointer;
     border-radius: 5px;
     transform: scale(1);
@@ -272,20 +276,15 @@ ul a:hover {
     transition: 0.5s;
 }
 
-.manchete2 {
-    color: white;
-    margin-top: 400px;
-    margin-left: 20px;
-    text-shadow: 2px 2px 2px black;
-}
-
 .noticia3 {
-    width: 60%;
-    height: 100%;
-    background-image: url("../assets/JaMorant.jpeg");
+    width: 40%;
+    height: 70%;
+    background-image: url("../assets/LakersXPelicans.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: top;
     float: left;
+    margin-top: 75px;
+    margin-left: 80px;
     cursor: pointer;
     border-radius: 5px;
     transform: scale(1);
@@ -299,20 +298,14 @@ ul a:hover {
     transition: 0.5s;
 }
 
-.manchete3 {
-    color: white;
-    margin-top: 400px;
-    margin-left: 20px;
-    text-shadow: 2px 2px 2px black;
-}
-
 .noticia4 {
-    width: 60%;
-    height: 100%;
-    background-image: url("../assets/JaMorant.jpeg");
+    width: 30%;
+    background-image: url("../assets/LukaDoncic.png");
     background-size: cover;
     background-position: center;
-    float: left;
+    float: right;
+    margin-right: 100px;
+    margin-top: 55px;
     cursor: pointer;
     border-radius: 5px;
     transform: scale(1);
@@ -326,20 +319,15 @@ ul a:hover {
     transition: 0.5s;
 }
 
-.manchete4 {
-    color: white;
-    margin-top: 400px;
-    margin-left: 20px;
-    text-shadow: 2px 2px 2px black;
-}
-
 .noticia5 {
-    width: 60%;
-    height: 100%;
-    background-image: url("../assets/JaMorant.jpeg");
+    width: 40%;
+    height: 70%;
+    background-image: url("../assets/RaptorsXspurs.jpg");
     background-size: cover;
     background-position: center;
     float: left;
+    margin-top: 75px;
+    margin-left: 80px;
     cursor: pointer;
     border-radius: 5px;
     transform: scale(1);
@@ -353,20 +341,15 @@ ul a:hover {
     transition: 0.5s;
 }
 
-.manchete5 {
-    color: white;
-    margin-top: 400px;
-    margin-left: 20px;
-    text-shadow: 2px 2px 2px black;
-}
 
 .noticia6 {
-    width: 60%;
-    height: 100%;
-    background-image: url("../assets/JaMorant.jpeg");
+    width: 30%;
+    background-image: url("../assets/BucksXDetroit.jpeg");
     background-size: cover;
     background-position: center;
-    float: left;
+    float: right;
+    margin-right: 100px;
+    margin-top: 75px;
     cursor: pointer;
     border-radius: 5px;
     transform: scale(1);
@@ -380,7 +363,7 @@ ul a:hover {
     transition: 0.5s;
 }
 
-.manchete6 {
+.manchete {
     color: white;
     margin-top: 400px;
     margin-left: 20px;
