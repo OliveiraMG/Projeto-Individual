@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+/* @import url('/Fonts/static/RobotoMono-ExtraLight.ttf'); */
+
+@font-face {
+    font-family: RobotoMono-ExtraLight;
+    src: local(RobotoMono-ExtraLight),url(../Fonts/static/RobotoMono-ExtraLight.ttf);
+  }
 
 /* BODY PADRÃO */
 * {
@@ -6,7 +11,7 @@
     margin: 0%;
     scroll-behavior: smooth;
     box-sizing: border-box;
-    font-family: 'Oxanium', sans-serif;
+    font-family: RobotoMono-ExtraLight;
 }
 
 body::-webkit-scrollbar-track {
@@ -22,12 +27,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
+    overflow-x: hidden;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 /* HEADER */
@@ -52,7 +57,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
 }
 
 .logonavbar img {
@@ -60,11 +64,10 @@ body {
 }
 
 .logonavbar ul {
-    width: 80%;
+    width: 100%;
     height: 50%;
     display: flex;
     align-items: center;
-    list-style: none;
 }
 
 .logonavbar ul li {
@@ -73,6 +76,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.block a{
+    display: flex;
+    align-items: center;
 }
 
 .logonavbar ul a {
@@ -87,7 +95,6 @@ body {
 }
 
 ul a:hover {
-    
     border-bottom: solid 1px #dca93f;
 }
 
@@ -102,16 +109,20 @@ ul a:hover {
     justify-content: center;
     cursor: pointer;
     text-decoration: none;
+    border: solid 1px #dca93f;
 }
 
 .header .fakebutton:hover {
-    border-bottom: solid 1px white;
+    border-bottom: solid 2px #dca93f;
 }
 
 .btnLogCad {
-    width: 21%;
+    width: 25%;
     display: flex;
+    justify-content: space-between;
 }
+
+/* BANNER */
 
 .block {
     width: 100%;
@@ -123,10 +134,8 @@ ul a:hover {
     align-items: center;
     margin-top: 4rem;
     background-image: linear-gradient(240deg, #ef9c4f, #ff912b);
-    border-radius: 180px 0px 180px 0px;
+    border-radius: 280px 0px 280px 0px;
 }
-
-/* BANNER */
 
 .bg {
     height: 560px;
@@ -184,15 +193,6 @@ ul a:hover {
 
 }
 
-.fakebutton a:hover {
-    width: 100%;
-    height: 100%;
-    color: #00000096;
-    border-radius: 5px;
-    background-color: #7fdaf4;
-    box-shadow: 0 0 5px #00c8ff;
-    
-}
 
 .bg img {
     height: 600px;
@@ -204,9 +204,11 @@ ul a:hover {
 #noticiasPosicao {
     border-radius: 280px 0px 180px 0px;
     background-image: linear-gradient(240deg, #ef9c4f, #ff912b);
+    width: 100%;
+    height: 100%;
 }
 
-#cabecalho {
+.cabecalho {
     height: 100px;
     width: 1270px;
     background-color:#3a125f;
@@ -225,9 +227,8 @@ ul a:hover {
 .linha {
     height: 5px;
     background-color: #dca93f;
-    width: 36.8%;
+    width: 400px;
     display: flex;
-    justify-content: flex-end;
     margin-top: 47px;
 }
 
@@ -238,12 +239,11 @@ ul a:hover {
 
 .noticia1 {
     width: 40%;
-    height: 70%;
     background-image: url("../assets/JaMorant.jpeg");
     background-size: cover;
     background-position: center;
     float: left;
-    margin-left: 80px;
+    margin-left: 100px;
     cursor: pointer;
     border-radius: 5px;
     transform: scale(1);
@@ -258,7 +258,7 @@ ul a:hover {
 }
 
 .noticia2 {
-    width: 30%;
+    width: 40%;
     background-image: url("../assets/CavaliersXCeltics.jpeg");
     background-size: cover;
     background-position: center;
@@ -279,13 +279,12 @@ ul a:hover {
 
 .noticia3 {
     width: 40%;
-    height: 70%;
     background-image: url("../assets/LakersXPelicans.jpg");
     background-size: cover;
     background-position: top;
     float: left;
-    margin-top: 75px;
-    margin-left: 80px;
+    margin-top: 55px;
+    margin-left: 100px;
     cursor: pointer;
     border-radius: 5px;
     transform: scale(1);
@@ -300,7 +299,7 @@ ul a:hover {
 }
 
 .noticia4 {
-    width: 30%;
+    width: 40%;
     background-image: url("../assets/LukaDoncic.png");
     background-size: cover;
     background-position: center;
@@ -326,8 +325,9 @@ ul a:hover {
     background-size: cover;
     background-position: center;
     float: left;
-    margin-top: 75px;
-    margin-left: 80px;
+    margin-top: 55px;
+    margin-bottom: 30px;
+    margin-left: 100px;
     cursor: pointer;
     border-radius: 5px;
     transform: scale(1);
@@ -343,13 +343,14 @@ ul a:hover {
 
 
 .noticia6 {
-    width: 30%;
+    width: 40%;
     background-image: url("../assets/BucksXDetroit.jpeg");
     background-size: cover;
     background-position: center;
     float: right;
     margin-right: 100px;
-    margin-top: 75px;
+    margin-top: 55px;
+    margin-bottom: 30px;
     cursor: pointer;
     border-radius: 5px;
     transform: scale(1);
@@ -364,7 +365,7 @@ ul a:hover {
 }
 
 .manchete {
-    color: white;
+    color: #dca93f;
     margin-top: 400px;
     margin-left: 20px;
     text-shadow: 2px 2px 2px black;
@@ -372,10 +373,64 @@ ul a:hover {
 
 /* MAIORES TIMES */
 #times {
-    border-radius: 280px 0px 180px 0px;
+    border-radius: 280px 0px 280px 0px;
     background-image: linear-gradient(240deg, #ef9c4f, #ff912b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .blocoTimes {
     padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+
+p.paragrafo {
+    display: flex;
+    text-align: justify;
+}
+
+/* FOOTER */
+.footer {
+    height: 100%;
+    width: 100%;
+    background-color: #3a125f;
+    display: flex;
+}
+
+.footer-container{
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer-col{
+    width: 70%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 20px;
+    color:  #dca93f;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline 0.1px;
+}
+
+.footer-col p{
+    font-size: 16px;
+    color:  #dca93f;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
