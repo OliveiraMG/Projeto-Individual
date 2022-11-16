@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="glider.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <div class="glider-contain">
+        <div class="glider">
+          <div>your content here</div>
+          <div>your content here</div>
+          <div>your content here</div>
+          <div>your content here</div>
+        </div>
+      
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
+      </div>
+</body>
+</html>
+
+<script src="glider.js">
+    window.addEventListener('load', function(){
+  new Glider(document.querySelector('.glider'), {
+    setting-name: setting-value
+  })
+})
+</script>

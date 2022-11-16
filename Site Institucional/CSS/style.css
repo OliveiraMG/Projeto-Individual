@@ -45,10 +45,9 @@ body {
     justify-content: space-between;
     background-color: #3a125f;
     padding: 0px 50px;
-    position: fixed;
+    position: absolute;
     left: 0px;
     top: 0px;
-    z-index: 3;
 }
 
 .logonavbar {
@@ -61,6 +60,7 @@ body {
 
 .logonavbar img {
     width: 50px;
+    margin-right: 30px;
 }
 
 .logonavbar ul {
@@ -92,10 +92,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
 }
 
-ul a:hover {
-    border-bottom: solid 1px #dca93f;
+ul a:hover  {
+    background-color: #dca93f ;
+    position: relative;
+    display: flex;
+    color: rgb(0, 0, 0);
 }
 
 .header .fakebutton {
@@ -133,7 +137,7 @@ ul a:hover {
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
-    background-image: linear-gradient(240deg, #ef9c4f, #ff912b);
+    background-image: linear-gradient(440deg, #350c74, #ef9c4f);
     border-radius: 280px 0px 280px 0px;
 }
 
@@ -156,15 +160,15 @@ ul a:hover {
 }
 
 .infobg h1 {
-    color: whitesmoke;
+    color: #dca93f;
     font-size: 40px;
-    font-weight: 100;
+    font-weight: bold;
 }
 
 .infobg p {
-    color: whitesmoke;
+    color: #dca93f;
     margin: 1rem 0;
-
+    font-weight: bold;
 }
 
 .infobg .fakebutton {
@@ -202,7 +206,7 @@ ul a:hover {
 
 #noticiasPosicao {
     border-radius: 280px 0px 180px 0px;
-    background-image: linear-gradient(240deg, #ef9c4f, #ff912b);
+    background-image: linear-gradient(440deg, #ef9c4f, #350c74);
     width: 100%;
     height: 100%;
 }
@@ -226,6 +230,7 @@ ul a:hover {
 .linha {
     height: 5px;
     background-color: #dca93f;
+    margin: 15px;
     width: 400px;
     display: flex;
     margin-top: 47px;
@@ -371,9 +376,10 @@ ul a:hover {
 }
 
 /* MAIORES TIMES */
+
 #times {
     border-radius: 280px 0px 280px 0px;
-    background-image: linear-gradient(240deg, #ef9c4f, #ff912b);
+    background-image: linear-gradient(440deg, #350c74, #ef9c4f);;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -386,11 +392,34 @@ ul a:hover {
     display: flex;
     flex-direction: column;
     margin-left: 200px;
+    margin-top: 40rem;
+    margin-bottom: 400px;
+}
+
+.glider-Ant {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.glider-Prox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+h3.tituloTime {
+    display: flex;
+    text-align: justify;
+    font-weight: bolder;
 }
 
 p.paragrafo {
     display: flex;
     text-align: justify;
+    font-weight: normal;
 }
 
 /* FOOTER */

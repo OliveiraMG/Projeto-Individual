@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/cadastro.css">
     <title>Hooper's Forever</title>
 </head>
 <body>
@@ -27,15 +27,95 @@
                 <a href="./cadastro.html" class="fakebutton">CADASTRO</a>
             </div>  
         </div>
+    </div>
 
+        <!-- CADASTRO -->
+
+        <div class="container">
+            <div id="form" class="form">
+
+                <h2>Cadastro do Usuário</h2>
+                <div class="campos">
+                    <div class="campo">
+                        <label for="nome_usuario">Nome</label>
+                        <input type="text" id="nome_usuario" placeholder="Nome">
+                    </div>
+                    <div class="campo">
+                        <label for="sobrenome_usuario">Sobrenome</label>
+                        <input type="text" name="" id="sobrenome_usuario" placeholder="Sobrenome">
+                    </div>
+                </div>
+
+                <div class="campos">
+                    <div class="campo">
+                        <label for="email_usuario">E-mail</label>
+                        <input type="email" id="email_usuario" placeholder="E-mail">
+                    </div>
+                    <div class="campo">
+                        <label for="senha_usuario">Senha</label>
+                        <input type="password" name="" id="senha_usuario" placeholder="Senha">
+                    </div>
+                    <div class="campo">
+                        <label for="cs_usuario">Confirmar Senha</label>
+                        <input type="password" id="cs_usuario" placeholder="Confirmar Senha">
+                    </div>
+                </div>
+
+                <div class="campos">
+                    <div class="campo">
+                        <label for="nascimento_usuario">Nascimento</label>
+                        <input type="date" id="nascimento_usuario" placeholder="Data de Nascimento">
+                    </div>
+                    <div class="campo">
+                        <label for="pais_usuario">País</label>
+                        <input type="text" name="" id="pais_usuario" placeholder="País">
+                    </div>
+                </div>
+
+                <div class="campos">
+                    <div class="campo">
+                        <label for="star_usuario">All-star favorito</label>
+                        <select name="" class="sel_star">
+                            <option value="">- Selecione seu All-Star -</option>
+                            <option value="jordan">Michael Jordan</option>
+                            <option value="lebron">Lebron James</option>
+                            <option value="jabbar">Kareem Abdul Jabbar</option>
+                            <option value="magic">Magic Johnson</option>
+                            <option value="chamberlain">Wilt Chamberlain</option>
+                            <option value="bill">Bill Russell</option>
+                            <option value="larry">Larry Bird</option>
+                            <option value="duncan">Tim Duncan</option>
+                            <option value="robertson">Oscar Robertson</option>
+                            <option value="kobe">Kobe Bryant</option>
+                            <option value="neal">Shaquille O’Neal</option>
+                            <option value="durant">Kevin Durant</option>
+                            <option value="hakeem">Hakeem Olajuwon</option>
+                            <option value="erving">Julius Erving</option>
+                            <option value="curry">Stephen Curry</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <button onclick="cadastrar()">Cadastrar</button>
+                </div>
+
+            </div>
+            <div class="form tr"></div>
+        </div>
         
         <!-- FOOTER -->
 
     <footer class="footer">
         <div class="footer-container">
                 <div class="footer-col">
-                    <h4>A dor não diz quando você deve parar. A dor é a vozinha em sua cabeça que tenta impedí-lo pois sabe que, se você continuar, você irá mudar.</h4><br>
-                    <p><i>- Kobe Bryant</i></p>
+                    <h4>Algumas pessoas querem que algo aconteça, outras desejam que aconteça
+                        e outras fazem acontecer.</h4><br>
+                    <p><i>- Michael Jordan</i></p>
                 </div>
         </div>
     </footer>
+
+</body>
+</html>
+

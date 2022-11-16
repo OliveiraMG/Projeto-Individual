@@ -1,0 +1,194 @@
+/* @import url('/Fonts/static/RobotoMono-ExtraLight.ttf'); */
+
+@font-face {
+    font-family: RobotoMono-ExtraLight;
+    src: local(RobotoMono-ExtraLight),url(../Fonts/static/RobotoMono-ExtraLight.ttf);
+  }
+
+/* BODY PADRÃO */
+* {
+    padding: 0%;
+    margin: 0%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: RobotoMono-ExtraLight;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #ef7e14;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #350c74;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/BasketballCourt.jpg);
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3a125f;
+    padding: 0px 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.logonavbar {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logonavbar img {
+    width: 50px;
+    margin-right: 30px;
+}
+
+.logonavbar ul {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.logonavbar ul li {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block a{
+    display: flex;
+    align-items: center;
+}
+
+.logonavbar ul a {
+    color: #dca93f;
+    text-decoration: none;
+    font-size: 14px;
+    width: 130%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+ul a:hover  {
+    background-color: #dca93f ;
+    position: relative;
+    display: flex;
+    color: rgb(0, 0, 0);
+}
+
+.header .fakebutton {
+    width: 127px;
+    height: 28px;
+    background-color:#350c74;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: solid 1px #dca93f;
+}
+
+.header .fakebutton:hover {
+    border-bottom: solid 2px #dca93f;
+}
+
+.btnLogCad {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* VIDEO */
+
+
+.video video{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+}
+
+.video h2{
+    text-align: center;
+    color: #3a125f;
+    padding-bottom: 40px;
+    padding-top: 30px;
+}
+
+.video {
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+/* FOOTER */
+.footer {
+    height: 100%;
+    width: 100%;
+    background-color: #3a125f;
+    display: flex;
+}
+
+.footer-container{
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer-col{
+    width: 70%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 20px;
+    color:  #dca93f;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline 0.1px;
+}
+
+.footer-col p{
+    font-size: 16px;
+    color:  #dca93f;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
