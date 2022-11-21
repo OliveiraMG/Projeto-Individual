@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="js/funcoes.js">
     <link rel="stylesheet" href="CSS/login.css">
     <title>Hooper's Forever</title>
 </head>
+
 <body>
     <!-- HEADER -->
     <div class="block">
@@ -25,50 +28,128 @@
             <div class="btnLogCad">
                 <a href="./login.html" class="fakebutton">LOGIN</a>
                 <a href="./cadastro.html" class="fakebutton">CADASTRO</a>
-            </div>  
+            </div>
+
+            <div id="saudacao">
+            <li><h3>Olá<i><span id="b_usuario" class="b_usuario">usuário</span></i></h3></li>
+            </div>
+
         </div>
     </div>
 
-        <!-- CADASTRO -->
+    <!-- LOGIN -->
 
-        <div class="container">
-            <div id="form" class="form">
+    <div class="container">
+        <div id="form" class="form">
 
-                <h2>Login do Usuário</h2>
+            <h2>Login do Usuário</h2>
 
-                <div class="campos">
-                    <div class="campo">
-                        <label for="email_usuario">E-mail</label>
-                        <input type="email" id="email_usuario" placeholder="E-mail">
-                    </div>
-                </div>
-
-                <div class="campos">
-                    <div class="campo">
-                        <label for="senha_usuario">Senha</label>
-                        <input type="password" name="" id="senha_usuario" placeholder="Senha">
-                    </div>
-                </div>
-
+            <div class="campos">
                 <div class="campo">
-                    <button onclick="logar()">Logar</button>
+                    <label for="email_usuario">E-mail</label>
+                    <input type="email" id="email_input" placeholder="E-mail">
                 </div>
-
             </div>
-            <div class="form tr"></div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="senha_usuario">Senha</label>
+                    <input type="password" name="" id="senha_input" placeholder="Senha">
+                </div>
+            </div>
+
+            <div class="campo">
+                <button onclick="logar()">Logar</button>
+            </div>
+
+            <div id="cardErro" class="card_erro">
+                <span id="div_mensagem"></span>
+            </div>
+
         </div>
-        
-        <!-- FOOTER -->
+        <div class="form tr"></div>
+    </div>
+
+    <!-- FOOTER -->
 
     <footer class="footer">
         <div class="footer-container">
-                <div class="footer-col">
-                    <h4>“Você tem que dar 125%. Coloque seu coração e alma nele; Aprenda a ter uma atitude positiva e vencedora. Não aceite a derrota, mas aprenda com ela.”</h4><br>
-                    <p><i>- Magic Johnson</i></p>
-                </div>
+            <div class="footer-col">
+                <h4>“Você tem que dar 125%. Coloque seu coração e alma nele; Aprenda a ter uma atitude positiva e
+                    vencedora. Não aceite a derrota, mas aprenda com ela.”</h4><br>
+                <p><i>- Magic Johnson</i></p>
+            </div>
         </div>
     </footer>
 
 </body>
 </html>
 
+<script>
+    function logar() {
+        
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
