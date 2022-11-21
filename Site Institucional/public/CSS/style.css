@@ -78,6 +78,17 @@ body {
     justify-content: center;
 }
 
+#saudacao li {
+    color:#dca93f;
+    text-decoration: none;
+    font-size: 18px;
+    width: 130%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .block a{
     display: flex;
     align-items: center;
@@ -146,6 +157,11 @@ ul a:hover  {
     width: 95%;
     padding: 0 50px;
     display: flex;
+}
+
+.bg img{
+    display: flex;
+    padding-bottom: 160px;
 }
 
 .infobg {

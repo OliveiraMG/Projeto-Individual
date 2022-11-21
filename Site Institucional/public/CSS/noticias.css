@@ -82,6 +82,17 @@ body {
     justify-content: center;
 }
 
+#saudacao li {
+    color:#dca93f;
+    text-decoration: none;
+    font-size: 18px;
+    width: 130%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .block a{
     display: flex;
     align-items: center;
