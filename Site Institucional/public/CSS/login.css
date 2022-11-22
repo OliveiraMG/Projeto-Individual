@@ -241,7 +241,16 @@ button:hover{
     transition: 0.5s;
 }
 
-
+#cardErro {
+    border: #dca93f solid 1.5px;
+    width: 270px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #360c74b5;
+    border-radius: 0px 0px 10px 10px;
+    margin-left: 30px;
+}
 
 /* FOOTER */
 .footer {

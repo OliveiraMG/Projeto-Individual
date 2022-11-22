@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="CSS/cadastro.css">
     <title>Hooper's Forever</title>
 </head>
+
 <body>
     <!-- HEADER -->
     <div class="block">
@@ -27,104 +29,121 @@
             <div class="btnLogCad">
                 <a href="./login.html" class="fakebutton">LOGIN</a>
                 <a href="./cadastro.html" class="fakebutton">CADASTRO</a>
-            </div>  
+            </div>
 
             <div id="saudacao">
-                <li><h3>Olá <i><b><span id="b_usuario" class="b_usuario">usuário</span></i></b></h3></li>
-                </div>
+                <li>
+                    <h3>Olá <i><b><span id="b_usuario" class="b_usuario">usuário</span></i></b></h3>
+                </li>
+            </div>
 
         </div>
     </div>
 
-        <!-- CADASTRO -->
+    <!-- CADASTRO -->
 
-        <div class="container">
-            <div id="form" class="form">
+    <div class="container">
+        <div id="form" class="form">
 
-                <h2>Cadastro do Usuário</h2>
-                <div class="campos">
-                    <div class="campo">
-                        <label for="nome_usuario">Nome</label>
-                        <input type="text" id="nome_input" placeholder="Nome">
-                    </div>
-                    <div class="campo">
-                        <label for="email_usuario">E-mail</label>
-                        <input type="email" id="email_input" placeholder="E-mail">
-                    </div>
+            <h2>Cadastro do Usuário</h2>
+            <div class="campos">
+                <div class="campo">
+                    <label for="nome_usuario">Nome</label>
+                    <input type="text" id="nome_input" placeholder="Nome">
                 </div>
-
-                <div class="campos">
-                    
-                    <div class="campo">
-                        <label for="senha_usuario">Senha</label>
-                        <input type="password" name="" id="senha_input" placeholder="Senha">
-                    </div>
-                    <div class="campo">
-                        <label for="cs_usuario">Confirmar Senha</label>
-                        <input type="password" id="cs_input" placeholder="Confirmar Senha">
-                    </div>
+                <div class="campo">
+                    <label for="email_usuario">E-mail</label>
+                    <input type="email" id="email_input" placeholder="E-mail">
                 </div>
+            </div>
 
-                <div class="campos">
-                    <div class="campo">
-                        <label for="nascimento_usuario">Nascimento</label>
-                        <input type="date" id="nascimento_input" placeholder="Data de Nascimento">
-                    </div>
-                </div>
-
-                <div class="campos">
-                    <div class="campo">
-                        <label for="star_usuario">All-star de todos os tempos:</label>
-                        <select name="" class="sel_star">
-                            <option value="">- Selecione seu All-Star favorito -</option>
-                            <option value="jordan">Michael Jordan</option>
-                            <option value="lebron">Lebron James</option>
-                            <option value="jabbar">Kareem Abdul Jabbar</option>
-                            <option value="magic">Magic Johnson</option>
-                            <option value="chamberlain">Wilt Chamberlain</option>
-                            <option value="bill">Bill Russell</option>
-                            <option value="larry">Larry Bird</option>
-                            <option value="duncan">Tim Duncan</option>
-                            <option value="robertson">Oscar Robertson</option>
-                            <option value="kobe">Kobe Bryant</option>
-                            <option value="neal">Shaquille O’Neal</option>
-                            <option value="durant">Kevin Durant</option>
-                            <option value="hakeem">Hakeem Olajuwon</option>
-                            <option value="erving">Julius Erving</option>
-                            <option value="curry">Stephen Curry</option>
-                        </select>
-                    </div>
-                </div>
+            <div class="campos">
 
                 <div class="campo">
-                    <button onclick="cadastrar()">Cadastrar</button>
+                    <label for="senha_usuario">Senha</label>
+                    <input type="password" name="" id="senha_input" placeholder="Senha">
                 </div>
+                <div class="campo">
+                    <label for="cs_usuario">Confirmar Senha</label>
+                    <input type="password" id="cs_input" placeholder="Confirmar Senha">
+                </div>
+            </div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="nascimento_usuario">Nascimento</label>
+                    <input type="date" id="nascimento_input" placeholder="Data de Nascimento">
+                </div>
+            </div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="star_usuario">All-star de todos os tempos:</label>
+                    <select name="" id="sel_star" class="sel_star">
+                        <option value="">- Selecione seu All-Star favorito -</option>
+                        <option value="jordan">Michael Jordan</option>
+                        <option value="lebron">Lebron James</option>
+                        <option value="jabbar">Kareem Abdul Jabbar</option>
+                        <option value="magic">Magic Johnson</option>
+                        <option value="chamberlain">Wilt Chamberlain</option>
+                        <option value="bill">Bill Russell</option>
+                        <option value="larry">Larry Bird</option>
+                        <option value="duncan">Tim Duncan</option>
+                        <option value="robertson">Oscar Robertson</option>
+                        <option value="kobe">Kobe Bryant</option>
+                        <option value="neal">Shaquille O’Neal</option>
+                        <option value="durant">Kevin Durant</option>
+                        <option value="hakeem">Hakeem Olajuwon</option>
+                        <option value="erving">Julius Erving</option>
+                        <option value="curry">Stephen Curry</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="campo">
+                <button onclick="cadastrar()">Cadastrar</button>
+            </div>
 
             <div id="cardErro" class="card_erro">
-                <span id="div_mensagem"></span>
             </div>
 
-            </div>
-            <div class="form tr"></div>
         </div>
-        
-        <!-- FOOTER -->
+        <div class="form tr"></div>
+    </div>
+
+    <!-- FOOTER -->
 
     <footer class="footer">
         <div class="footer-container">
-                <div class="footer-col">
-                    <h4>“Algumas pessoas querem que algo aconteça, outras desejam que aconteça
-                        e outras fazem acontecer.”</h4><br>
-                    <p><i>- Michael Jordan</i></p>
-                </div>
+            <div class="footer-col">
+                <h4>“Algumas pessoas querem que algo aconteça, outras desejam que aconteça
+                    e outras fazem acontecer.”</h4><br>
+                <p><i>- Michael Jordan</i></p>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
 
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
+    function logado() {
+
+        var nome = sessionStorage.NOME_USUARIO
+        var email = sessionStorage.EMAIL_USUARIO
+
+        console.log(nome, email)
+
+        if (nome == undefined && email == undefined) {
+            saudacao.innerHTML = ""
+        } else {
+            btnLogCad.innerHTML = ""
+        }
+    }
+
     function cadastrar() {
-        aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -135,11 +154,15 @@
         var nascimentoVar = nascimento_input.value;
         var allStarVar = sel_star.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || nascimento == "" || allStar == "") {
+        if (senhaVar != confirmacaoSenhaVar) {
             cardErro.style.display = "block"
-            div_mensagem.innerHTML = "<span style='color: red;'>Há algum campo em branco</span>";
+            cardErro.innerHTML = "<b><span style='color: red;'>As senhas não são compatíveis</span></b>";
+        }
 
-            finalizarAguardar();
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || nascimento == "" || allStar == null) {
+            cardErro.style.display = "block"
+            cardErro.innerHTML = "<b><span style='color: red;'>Há algum campo em branco</span></b>";
+
             return false;
         }
         else {
@@ -173,7 +196,7 @@
                 setTimeout(() => {
                     window.location = "login.html";
                 }, "2000")
-                
+
                 limparFormulario();
                 finalizarAguardar();
             } else {
@@ -193,4 +216,3 @@
 
 </script>
 </script>
-

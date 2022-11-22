@@ -32,7 +32,9 @@
             </div>
 
             <div id="saudacao">
-            <li><h3>Olá <i><b><span id="b_usuario" class="b_usuario">usuário</span></i></b></h3></li>
+                <li>
+                    <h3>Olá <i><b><span id="b_usuario" class="b_usuario">usuário</span></i></b></h3>
+                </li>
             </div>
 
         </div>
@@ -64,7 +66,6 @@
             </div>
 
             <div id="cardErro" class="card_erro">
-                <span id="div_mensagem"></span>
             </div>
 
         </div>
@@ -84,17 +85,34 @@
     </footer>
 
 </body>
+
 </html>
 
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
+    function logado() {
+
+        var nome = sessionStorage.NOME_USUARIO
+        var email = sessionStorage.EMAIL_USUARIO
+
+        console.log(nome, email)
+
+        if (nome == undefined && email == undefined) {
+            saudacao.innerHTML = ""
+        } else {
+            btnLogCad.innerHTML = ""
+        }
+    }
+
     function logar() {
-        
+
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            cardErro.innerHTML = "<b><span style='color: red;'>Há algum campo em branco</span></b>";
             return false;
         }
         else {
@@ -128,7 +146,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "";
+                        window.location = "./index.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

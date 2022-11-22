@@ -513,6 +513,19 @@ input {
     text-align: justify;
 } 
 
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 17rem;
+    background-color: rgba(53, 12, 116, 0.7);
+    color: #dca93f;
+    top: 100px;
+    width: 100%;
+    flex-direction: column;
+}
+
 h3.tituloTime {
     display: flex;
     text-align: justify;
@@ -522,7 +535,7 @@ h3.tituloTime {
 p.paragrafo {
     display: flex;
     text-align: justify;
-    font-weight: normal;
+    font-weight: bolder;
 }
 
 /* FOOTER */

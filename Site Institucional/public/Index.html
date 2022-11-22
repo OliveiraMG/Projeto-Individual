@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,8 @@
     <link rel="stylesheet" href="CSS/style.css">
     <title>Hooper's Forever</title>
 </head>
-<body>
+
+<body onload="logado()">
     <!-- HEADER -->
     <div class="block">
         <div class="header">
@@ -24,13 +26,15 @@
                 </ul>
             </div>
 
-            <div class="btnLogCad">
+            <div class="btnLogCad" id="btnLogCad">
                 <a href="./login.html" class="fakebutton">LOGIN</a>
                 <a href="./cadastro.html" class="fakebutton">CADASTRO</a>
             </div>
-            
+
             <div id="saudacao">
-            <li><h3>Olá <i><b><span id="b_usuario" class="b_usuario">usuário</span></i></b></h3></li>
+                <li>
+                    <h3>Olá <i><b><span id="b_usuario" class="b_usuario">usuário</span></i></b></h3>
+                </li>
             </div>
 
         </div>
@@ -74,7 +78,8 @@
             </div>
 
             <div class="noticia5" onclick="noticia5()">
-                <h3 class="manchete">Raptors atropela San Antonio Spurs, que tem sua maior derrota da história com Gregg Popovich.</h3>
+                <h3 class="manchete">Raptors atropela San Antonio Spurs, que tem sua maior derrota da história com Gregg
+                    Popovich.</h3>
             </div>
 
             <div class="noticia6" onclick="noticia6()">
@@ -102,16 +107,16 @@
             <div class="slides">
 
                 <div class="navigation">
-                    <label class= "bar" for="slide1"></label>
-                    <label class= "bar" for="slide2"></label>
-                    <label class= "bar" for="slide3"></label>
-                    <label class= "bar" for="slide4"></label>
-                    <label class= "bar" for="slide5"></label>
-                    <label class= "bar" for="slide6"></label>
-                    <label class= "bar" for="slide7"></label>
-                    <label class= "bar" for="slide8"></label>
-                    <label class= "bar" for="slide9"></label>
-                    <label class= "bar" for="slide10"></label>
+                    <label class="bar" for="slide1"></label>
+                    <label class="bar" for="slide2"></label>
+                    <label class="bar" for="slide3"></label>
+                    <label class="bar" for="slide4"></label>
+                    <label class="bar" for="slide5"></label>
+                    <label class="bar" for="slide6"></label>
+                    <label class="bar" for="slide7"></label>
+                    <label class="bar" for="slide8"></label>
+                    <label class="bar" for="slide9"></label>
+                    <label class="bar" for="slide10"></label>
                 </div>
 
                 <input type="radio" name="slide" id="slide1" checked>
@@ -125,110 +130,137 @@
                 <input type="radio" name="slide" id="slide9">
                 <input type="radio" name="slide" id="slide10">
 
-            <div class="slide s1">
-                <img src="./assets/Celtics.jpg" alt="Boston Celtics - 2008">
-                <h3 class="tituloTime">1° - Celtics</h3>
-                <p class="paragrafo">O Boston Celtics é o maior campeão da NBA.<br>
-                A franquia detém nada mais e nada menos do que<br>
-                17 títulos, os quais foram conquistados, em sua maioria,<br>
-                nas eras de Bill Rusell (1950-1960) e de Larry Bird (1980).
-                </p><br><br>
-            </div>
+                <div class="slide s1">
+                    <img src="./assets/Celtics.jpg" alt="Boston Celtics - 2008">
+                    <div class="text">
+                        <h3 class="tituloTime">1° - Celtics</h3>
+                        <p class="paragrafo">O Boston Celtics é o maior campeão da NBA.<br>
+                            A franquia detém nada mais e nada menos do que<br>
+                            17 títulos, os quais foram conquistados, em sua maioria,<br>
+                            nas eras de Bill Rusell (1950-1960) e de Larry Bird (1980).<br>
+                            Atualmente a franquia está em jejum de títulos desde 2008
+                        </p><br>
+                    </div>
+                </div>
 
-            <div class="slide s2">
-                <img src="./assets/Lakers.jpg" alt="Los Angeles Lakers - 2020">
-                <h3 class="tituloTime">2° - Lakers</h3>
-                <p class="paragrafo">Logo após vem o maior rival do Celtics, Los<br>
-                Angeles Lakers com 16 títulos. A franquia vivru<br>
-                em épocas de ouro com All-stars fenomenais, por exemplo:<br>
-                George Mikan, Magic Johnson, Kareem Abdul-Jabbar,<br>
-                Kobe Bryant e Shaquille O'Neal.
-                </p><br><br>
-            </div>
+                <div class="slide s2">
+                    <img src="./assets/Lakers.jpg" alt="Los Angeles Lakers - 2020">
+                    <div class="text">
+                        <h3 class="tituloTime">2° - Lakers</h3>
+                        <p class="paragrafo">Logo após vem o maior rival do Celtics, Los<br>
+                            Angeles Lakers com 16 títulos. A franquia viveu<br>
+                            em épocas de ouro com All-stars fenomenais, por exemplo:<br>
+                            George Mikan, Magic Johnson, Kareem Abdul-Jabbar,<br>
+                            Kobe Bryant e Shaquille O'Neal.
+                        </p><br>
+                    </div>
+                </div>
 
-            <div class="slide s3">
-                <img src="./assets/Warriors.jpg" alt="Golden State Warriors - 2019">
-                <h3 class="tituloTime">3° - Golden State Warriors</h3>
-                <p class="paragrafo">Um time em que muitos não acreditam estar<br>
-                nessa lista, mas antes de Curry, Thompson, Durant<br>
-                Draymond já tinha 3 títulos da NBA na conta, com<br>
-                Rick Barry. Assim totaliza-se 6 títulos com o Golden<br>
-                dos Splash Brothers.
-                </p><br><br>
-            </div>
+                <div class="slide s3">
+                    <img src="./assets/Warriors.jpg" alt="Golden State Warriors - 2019">
+                    <div class="text">
+                        <h3 class="tituloTime">3° - Golden State Warriors</h3>
+                        <p class="paragrafo">Um time em que muitos não acreditam estar<br>
+                            nessa lista, mas antes de Curry, Thompson, Durant<br>
+                            Draymond já tinha 3 títulos da NBA na conta, com<br>
+                            Rick Barry. Assim totaliza-se 6 títulos com o Golden<br>
+                            dos Splash Brothers.
+                        </p><br>
+                    </div>
+                </div>
 
-            <div class="slide s4">
-                <img src="./assets/Bulls.jpg" alt="Chicago Bulls - 1998">
-                <h3 class="tituloTime">4° - Chicago Bulls</h3>
-                <p class="paragrafo">O Chicago Bulls é uma das franquias mais populares da NBA,<br>
-                pelo seu icônico time que continha lendas como Michael Jordan,<br>
-                Scottie Pippen e Rodman. Tem incríveis 6 títulos no total<br>
-                conquistados nos anos 1990 pela inabalável equipe de Phil Jackson,<br>
-                sendo considerada por muitos a melhor franquia da história da NBA.
-                </p><br><br>
-            </div>
+                <div class="slide s4">
+                    <img src="./assets/Bulls.jpg" alt="Chicago Bulls - 1998">
+                    <div class="text">
+                        <h3 class="tituloTime">4° - Chicago Bulls</h3>
+                        <p class="paragrafo">O Chicago Bulls é uma das franquias mais populares da NBA,<br>
+                            pelo seu icônico time que continha lendas como Michael Jordan,<br>
+                            Scottie Pippen e Rodman. Tem incríveis 6 títulos no total<br>
+                            conquistados nos anos 1990 pela inabalável equipe de Phil Jackson,<br>
+                            sendo considerada por muitos a melhor franquia da história da NBA.
+                        </p><br>
+                    </div>
+                </div>
 
 
-            <div class="slide s5">
-                <img src="./assets/Spurs.png" alt="San Antonio Spurs - 2014">
-                <h3 class="tituloTime">5° - San Antonio Spurs</h3>
-                <p class="paragrafo">Contendo 5 títulos o Spurs é uma das franquias mais<br>
-                bem-sucedidas das últimas duas décadas. A história<br>
-                se iniciou com Popovich e Tim Duncan, continuando com<br>
-                Manu Ginobili, Tony Parker e Kahwi Leonard.
-                </p><br><br>
-            </div>
+                <div class="slide s5">
+                    <img src="./assets/Spurs.png" alt="San Antonio Spurs - 2014">
+                    <div class="text">
+                        <h3 class="tituloTime">5° - San Antonio Spurs</h3>
+                        <p class="paragrafo">Contendo 5 títulos o Spurs é uma das franquias mais<br>
+                            bem-sucedidas das últimas duas décadas. A história<br>
+                            se iniciou com Popovich e Tim Duncan, continuando com<br>
+                            Manu Ginobili, Tony Parker e Kahwi Leonard, os quais<br>
+                            são um dos maiores BIG 3 da história da NBA.
+                        </p><br>
+                    </div>
+                </div>
 
-            <div class="slide s6">
-                <img src="./assets/76ers.jpeg" alt="Philadelphia 76ers - 1983">
-                <h3 class="tituloTime">6° - Philadelphia 76ers</h3>
-                <p class="paragrafo">Um time cheio de história e com uma torcida fanática,<br>
-                porém um time que está na fila de seu próximo título há<br>
-                muitos anos. O último de seus 3 únicos títulos foi nos anos<br>
-                de 1983, com Maurice Cheeks, Julius Erving e Moses Malone.
-                </p><br><br>
-            </div>
+                <div class="slide s6">
+                    <img src="./assets/76ers.jpeg" alt="Philadelphia 76ers - 1983">
+                    <div class="text">
+                        <h3 class="tituloTime">6° - Philadelphia 76ers</h3>
+                        <p class="paragrafo">Um time cheio de história e com uma torcida fanática,<br>
+                            porém um time que está na fila de seu próximo título há<br>
+                            muitos anos. O último de seus 3 únicos títulos foi nos anos<br>
+                            de 1983, com Maurice Cheeks, Julius Erving e Moses Malone.<br>
+                            Atualmente fazem quase 40 anos sem título da NBA.
+                        </p><br>
+                    </div>
+                </div>
 
-            <div class="slide s7">
-                <img src="./assets/Pistons.jpg" alt="Detroit Pistons - 1989">
-                <h3 class="tituloTime">7° - Detroit Pistons</h3>
-                <p class="paragrafo">Sendo também outro tricampeão da NBA, o Detroit Pistons<br>
-                venceu seus títulos com times muito raçudos, como os Bad Boys<br>
-                do fim dos anos 1980 e a equipe sem all-stars, porém<br> 
-                repleta de coletividade e química entre os jogadores, de Larry<br>
-                Brown, no ano de 2004.
-                </p><br><br>
-            </div>
+                <div class="slide s7">
+                    <img src="./assets/Pistons.jpg" alt="Detroit Pistons - 1989">
+                    <div class="text">
+                        <h3 class="tituloTime">7° - Detroit Pistons</h3>
+                        <p class="paragrafo">Sendo também outro tricampeão da NBA, o Detroit Pistons<br>
+                            venceu seus títulos com times muito raçudos, como os Bad Boys<br>
+                            do fim dos anos 1980 e a equipe sem all-stars, porém<br>
+                            repleta de coletividade e química entre os jogadores, de Larry<br>
+                            Brown, no ano de 2004.
+                        </p><br>
+                    </div>
+                </div>
 
-            <div class="slide s8">
-                <img src="./assets/Heat.jpg" alt="Miami Heat - 2013">
-                <h3 class="tituloTime">8° - Miami Heat</h3>
-                <p class="paragrafo">Conhecido pela cultura de trabalho, o Heat venceu títulos<br>
-                no ano de 2006, com Dwayne Wade e Shaquille O'Neal. Em 2012/13<br>
-                com a históica franquia do 'Big 3' formado por LeBron James,<br>
-                Dwayne Wade e Chris Bosh.
-                </p><br><br>
-            </div>
+                <div class="slide s8">
+                    <img src="./assets/Heat.jpg" alt="Miami Heat - 2013">
+                    <div class="text">
+                        <h3 class="tituloTime">8° - Miami Heat</h3>
+                        <p class="paragrafo">Conhecido pela cultura de trabalho, o Heat venceu títulos<br>
+                            no ano de 2006, com Dwayne Wade e Shaquille O'Neal. Em 2012/13<br>
+                            com a históica franquia que era formada por LeBron James,<br>
+                            Dwayne Wade e Chris Bosh. Os quais são considerados até hoje,<br>
+                            por alguns, o maior BIG 3 que a liga americana presenciou.
+                        </p><br>
+                    </div>
+                </div>
 
-            <div class="slide s9">
-                <img src="./assets/Knicks.png" alt="New York Knicks - 1973">
-                <h3 class="tituloTime">9° - New York Knicks</h3>
-                <p class="paragrafo">Essa é uma franquia onde há muitos apaixonados, porém sofrem<br>
-                a equipe é o motivo do sofrimento há décadas. Afinal, os últimos dois<br>
-                títulos conquistados por essa equipe foram nos anos de 1970 e 1973.
-                </p><br><br>
-            </div>
+                <div class="slide s9">
+                    <img src="./assets/Knicks.png" alt="New York Knicks - 1973">
+                    <div class="text">
+                        <h3 class="tituloTime">9° - New York Knicks</h3>
+                        <p class="paragrafo">Essa é uma franquia onde há muitos apaixonados, porém sofrem<br>
+                            a equipe é o motivo do sofrimento há décadas. Afinal, os últimos dois<br>
+                            títulos conquistados por essa equipe foram nos anos de 1970 e 1973.<br>
+                            Títulos esses conquistados quando Phil Jackson (ex-treinador do vitorioso<br>
+                            Bulls) ainda jogava por lá.
 
-            <div class="slide s10">
-                <img src="./assets/Rockets.jpg" alt="Houston Rockets - 1994">
-                <h3 class="tituloTime">10° - Houston Rockets</h3>
-                <p class="paragrafo">Por último e não menos importante está o time dos Rockets, a equipe<br>
-                que melhor aproveitou o fim da primeira ascenção do Bulls e a primeira<br>
-                aposentadoria de Jordan, afinal logo após ele se ausentar para jogar<br>
-                beisebol, Hakeem Olajuwon liderou o time na conquista dos títulos em<br>
-                1994 e 1995.
-                </p><br><br>
-            </div>
+                        </p><br>
+                    </div>
+                </div>
+
+                <div class="slide s10">
+                    <img src="./assets/Rockets.jpg" alt="Houston Rockets - 1994">
+                    <div class="text">
+                        <h3 class="tituloTime">10° - Houston Rockets</h3>
+                        <p class="paragrafo">Por último e não menos importante está o time dos Rockets, a equipe<br>
+                            que melhor aproveitou o fim da primeira ascenção do Bulls e a primeira<br>
+                            aposentadoria de Jordan, afinal logo após ele se ausentar para jogar<br>
+                            beisebol, Hakeem Olajuwon liderou o time na conquista dos títulos em<br>
+                            1994 e 1995.
+                        </p><br>
+                    </div>
+                </div>
 
             </div>
 
@@ -240,17 +272,35 @@
 
     <footer class="footer">
         <div class="footer-container">
-                <div class="footer-col">
-                    <h4>“A dor não diz quando você deve parar. A dor é a vozinha em sua cabeça que tenta impedí-lo pois sabe que, se você continuar, você irá mudar.”</h4><br>
-                    <p><i>- Kobe Bryant</i></p>
-                </div>
+            <div class="footer-col">
+                <h4>“A dor não diz quando você deve parar. A dor é a vozinha em sua cabeça que tenta impedí-lo pois sabe
+                    que, se você continuar, você irá mudar.”</h4><br>
+                <p><i>- Kobe Bryant</i></p>
+            </div>
         </div>
     </footer>
 
 </body>
+
 </html>
 
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
+    function logado() {
+
+        var nome = sessionStorage.NOME_USUARIO
+        var email = sessionStorage.EMAIL_USUARIO
+
+        console.log(nome, email)
+
+        if (nome == undefined && email == undefined) {
+            saudacao.innerHTML = ""
+        } else {
+            btnLogCad.innerHTML = ""
+        }
+    }
+
     function noticia1() {
         window.location.href = "notJa.html";
     }
