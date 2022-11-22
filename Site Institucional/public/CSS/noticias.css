@@ -91,6 +91,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 20rem;
 }
 
 .block a{
@@ -139,6 +140,7 @@ ul a:hover  {
     width: 25%;
     display: flex;
     justify-content: space-between;
+    margin-right: -25rem;
 }
 
 

@@ -296,8 +296,10 @@
 
         if (nome == undefined && email == undefined) {
             saudacao.innerHTML = ""
+            document.getElementById('saudacao').style.visibility = 'hidden';
         } else {
             btnLogCad.innerHTML = ""
+            document.getElementById('btnLogCad').style.visibility = 'hidden';
         }
     }
 

@@ -12,7 +12,7 @@
     <title>Hooper's Forever</title>
 </head>
 
-<body>
+<body onload="logado()">
     <!-- HEADER -->
     <div class="block">
         <div class="header">
@@ -104,7 +104,7 @@
                 <button onclick="cadastrar()">Cadastrar</button>
             </div>
 
-            <div id="cardErro" class="card_erro">
+            <div id="cardErro" class="card_erro" style="visibility: hidden;">
             </div>
 
         </div>
@@ -138,8 +138,10 @@
 
         if (nome == undefined && email == undefined) {
             saudacao.innerHTML = ""
+            document.getElementById('saudacao').style.visibility = 'hidden';
         } else {
             btnLogCad.innerHTML = ""
+            document.getElementById('btnLogCad').style.visibility = 'hidden';
         }
     }
 
@@ -156,11 +158,13 @@
 
         if (senhaVar != confirmacaoSenhaVar) {
             cardErro.style.display = "block"
+            document.getElementById('cardErro').style.visibility = 'visible';
             cardErro.innerHTML = "<b><span style='color: red;'>As senhas não são compatíveis</span></b>";
         }
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || nascimento == "" || allStar == null) {
             cardErro.style.display = "block"
+            document.getElementById('cardErro').style.visibility = 'visible';
             cardErro.innerHTML = "<b><span style='color: red;'>Há algum campo em branco</span></b>";
 
             return false;

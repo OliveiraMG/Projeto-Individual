@@ -90,6 +90,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 20rem;
 }
 
 .block a{
@@ -120,7 +121,7 @@ ul a:hover  {
     width: 127px;
     height: 28px;
     background-color:#350c74;
-    color: white;
+    color: #dca93f;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -138,6 +139,7 @@ ul a:hover  {
     width: 25%;
     display: flex;
     justify-content: space-between;
+    margin-right: -25rem;
 }
 
 
@@ -171,6 +173,10 @@ ul a:hover  {
 
 .form h2{
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
 }
 
 .campos{

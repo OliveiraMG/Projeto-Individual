@@ -12,7 +12,7 @@
     <title>Hooper's Forever</title>
 </head>
 
-<body>
+<body onload="logado()">
     <!-- HEADER -->
     <div class="block">
         <div class="header">
@@ -79,8 +79,10 @@
 
         if (nome == undefined && email == undefined) {
             saudacao.innerHTML = ""
+            document.getElementById('saudacao').style.visibility = 'hidden';
         } else {
             btnLogCad.innerHTML = ""
+            document.getElementById('btnLogCad').style.visibility = 'hidden';
         }
     }
 </script>
