@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/logoBasket.png">
+    <link rel="stylesheet" href="js/funcoes.js">
+    <link rel="stylesheet" href="CSS/PerfilDash.css">
+    <script src="./js/funcoes.js"></script>
+    <title>Hooper's Forever</title>
+</head>
+
+<body onload="logado()">
+    <!-- HEADER -->
+    <div class="block">
+        <div class="header">
+            <div class="logonavbar">
+                <a href="./Index.html"><img src="assets/logoBasket.png" alt=""></a>
+                <ul>
+                    <li><a href="./Index.html">Home</a></li>
+                    <li><a href="./Index.html#cabecalho1">Notícias</a></li>
+                    <li><a href="./Index.html#cabecalho2">Times</a></li>
+                    <li><a href="./login.html">Perfil</a></li>
+                </ul>
+            </div>
+
+            <div class="btnLogCad" id="btnLogCad">
+                <a href="./login.html" class="fakebutton">LOGIN</a>
+                <a href="./cadastro.html" class="fakebutton">CADASTRO</a>
+            </div>
+
+            <div id="saudacao">
+                <li>
+                    <h3>Olá <i><b><span id="b_usuario" class="b_usuario">usuário</span></i></b></h3>
+                </li>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BODY -->
+
+    <div class="janela">
+
+        <div class="container-left">
+
+            <h1>Hooper's Forever</h1>
+            <h3>Aqui temos os dados do seu All-Star favorito.</h3>
+
+            <div class="FotoJogador">
+                <img src="" alt="">
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h4>Sair</h4>
+            </div>
+
+        </div>
+
+        <div class="DashStats">
+
+            <div class="legenda">
+        
+                <div class="Quadros1">
+                    <h2>Jogos Disputados:</h2>
+                    <h4>100 Jogos</h4>
+                </div>
+        
+                <div class="Quadros2">
+                    <h2>Pontos por Partida:</h2>
+                    <h4>100 Pontos</h4>
+                </div>
+        
+                <div class="Quadros3">
+                    <h2>Arremessos em Quadra:</h2>
+                    <h4>100 Arremessos</h4>
+                </div>
+        
+                <div class="Quadros4">
+                    <h2>Arremessos de 3 Pontos:</h2>
+                    <h4>100 Arremessos 3 pontos</h4>
+                </div>
+        
+                <div class="Quadros5">
+                    <h2>Rebotes por Partida:</h2>
+                    <h4>10 Rebotes</h4>
+                </div>
+        
+                <div class="Quadros6">
+                    <h2>Assistências por Partida:</h2>
+                    <h4>10 Assistências</h4>
+                </div>
+        
+                <div class="Quadros7">
+                    <h2>Roubos de Bola por Partida:</h2>
+                    <h4>10 Roubos de Bola</h4>
+                </div>
+        
+                <div class="Quadros8">
+                    <h2>Bloqueios por Partida:</h2>
+                    <h4>10 Bloqueios</h4>
+                </div>
+            </div>
+
+            <div id="graficos">
+                <div id="grafico1" class="display-block">
+                    <h3 class="tituloGraficos">
+                        <span id="tituloJogador">123</span>
+                    </h3>
+                    <div class="graphic">
+                        <canvas id="myChartCanvas"></canvas>
+                    </div>
+                    <div class="label-captura">
+                        <p id="avisoCaptura1" style="color: white"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>“Algumas pessoas querem que algo aconteça, outras desejam que aconteça
+                    e outras fazem acontecer.”</h4><br>
+                <p><i>- Michael Jordan</i></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
+    function logado() {
+
+        var nome = sessionStorage.NOME_USUARIO
+        var email = sessionStorage.EMAIL_USUARIO
+
+        console.log(nome, email)
+
+        if (sessionStorage.NOME_USUARIO == undefined && email == undefined) {
+            saudacao.innerHTML = ""
+            document.getElementById('saudacao').style.visibility = 'hidden';
+        } else {
+            btnLogCad.innerHTML = ""
+            document.getElementById('btnLogCad').style.visibility = 'hidden';
+        }
+    }
+
+    function limparSessao() {
+
+        // aguardar();
+        sessionStorage.clear();
+        // finalizarAguardar();
+        window.location = "../login.html";
+
+    }
+</script>
