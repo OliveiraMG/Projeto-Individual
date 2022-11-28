@@ -26,7 +26,7 @@
                 </ul>
             </div>
 
-            <div class="btnLogCad">
+            <div class="btnLogCad" id="btnLogCad">
                 <a href="./login.html" class="fakebutton">LOGIN</a>
                 <a href="./cadastro.html" class="fakebutton">CADASTRO</a>
             </div>
@@ -81,21 +81,21 @@
                     <label for="star_usuario">All-star de todos os tempos:</label>
                     <select name="" id="sel_star" class="sel_star">
                         <option value="">- Selecione seu All-Star favorito -</option>
-                        <option value="jordan">Michael Jordan</option>
-                        <option value="lebron">Lebron James</option>
-                        <option value="jabbar">Kareem Abdul Jabbar</option>
-                        <option value="magic">Magic Johnson</option>
-                        <option value="chamberlain">Wilt Chamberlain</option>
-                        <option value="bill">Bill Russell</option>
-                        <option value="larry">Larry Bird</option>
-                        <option value="duncan">Tim Duncan</option>
-                        <option value="robertson">Oscar Robertson</option>
-                        <option value="kobe">Kobe Bryant</option>
-                        <option value="neal">Shaquille O’Neal</option>
-                        <option value="durant">Kevin Durant</option>
-                        <option value="hakeem">Hakeem Olajuwon</option>
-                        <option value="erving">Julius Erving</option>
-                        <option value="curry">Stephen Curry</option>
+                        <option value="1000">Michael Jordan</option>
+                        <option value="1001">Lebron James</option>
+                        <option value="1002">Kareem Abdul Jabbar</option>
+                        <option value="1003">Magic Johnson</option>
+                        <option value="1004">Wilt Chamberlain</option>
+                        <option value="1005">Bill Russell</option>
+                        <option value="1006">Larry Bird</option>
+                        <option value="1007">Tim Duncan</option>
+                        <option value="1008">Oscar Robertson</option>
+                        <option value="1009">Kobe Bryant</option>
+                        <option value="1010">Shaquille O’Neal</option>
+                        <option value="1011">Kevin Durant</option>
+                        <option value="1012">Hakeem Olajuwon</option>
+                        <option value="1013">Julius Erving</option>
+                        <option value="1014">Stephen Curry</option>
                     </select>
                 </div>
             </div>
@@ -153,8 +153,9 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = cs_input.value;
-        var nascimentoVar = nascimento_input.value;
-        var allStarVar = sel_star.value;
+        var nascimentoVar = nascimento_input.value.toString();
+        var allStarVar = Number(sel_star.value);
+        console.log(allStarVar)
 
         if (senhaVar != confirmacaoSenhaVar) {
             cardErro.style.display = "block"
@@ -162,7 +163,7 @@
             cardErro.innerHTML = "<b><span style='color: red;'>As senhas não são compatíveis</span></b>";
         }
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || nascimento == "" || allStar == null) {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || nascimentoVar == "" || allStarVar == undefined) {
             cardErro.style.display = "block"
             document.getElementById('cardErro').style.visibility = 'visible';
             cardErro.innerHTML = "<b><span style='color: red;'>Há algum campo em branco</span></b>";
@@ -182,11 +183,11 @@
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar,
-                nascimentoSever: nascimentoVar,
-                allStarServer: allStarVar
+                fkAllStar: allStarVar,
+                nome: nomeVar,
+                senha: senhaVar,
+                email: emailVar,
+                nascimento: nascimentoVar,
             })
         }).then(function (resposta) {
 
@@ -202,13 +203,13 @@
                 }, "2000")
 
                 limparFormulario();
-                finalizarAguardar();
+                console.log('Caio Deu Bom')
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+            console.log('Caio')
         });
 
         return false;
