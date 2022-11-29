@@ -22,7 +22,7 @@
                     <li><a href="./Index.html">Home</a></li>
                     <li><a href="./Index.html#cabecalho1">Notícias</a></li>
                     <li><a href="./Index.html#cabecalho2">Times</a></li>
-                    <li><a href="./login.html">Perfil</a></li>
+                    <li><a href="./perfil.html">Perfil</a></li>
                 </ul>
             </div>
 
@@ -147,9 +147,10 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ALLSTAR = json.fkAllStar;
 
                     setTimeout(function () {
-                        window.location = "./index.html";
+                        window.location = "./perfil.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

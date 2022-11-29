@@ -50,9 +50,7 @@
             <h1>Hooper's Forever</h1>
             <h3>Aqui temos os dados do seu All-Star favorito.</h3>
 
-            <div class="FotoJogador">
-                <img src="" alt="">
-            </div>
+            <img id="img_jogador" src="" alt="" style="height: 250px;">
 
             <div class="btn-logout" onclick="limparSessao()">
                 <h4>Sair</h4>
@@ -63,64 +61,57 @@
         <div class="DashStats">
 
             <div class="legenda">
-        
+
                 <div class="Quadros1">
                     <h2>Jogos Disputados:</h2>
-                    <h4>100 Jogos</h4>
+                    <h4><span id="span_JD"></span> Jogos</h4>
                 </div>
-        
+
                 <div class="Quadros2">
                     <h2>Pontos por Partida:</h2>
-                    <h4>100 Pontos</h4>
+                    <h4><span id="span_PtsPar"></span> Pontos</h4>
                 </div>
-        
+
                 <div class="Quadros3">
                     <h2>Arremessos em Quadra:</h2>
-                    <h4>100 Arremessos</h4>
+                    <h4><span id="span_Arr"></span> Arremessos</h4>
                 </div>
-        
+
                 <div class="Quadros4">
                     <h2>Arremessos de 3 Pontos:</h2>
-                    <h4>100 Arremessos 3 pontos</h4>
+                    <h4><span id="span_Arr3Pts"></span> Arremessos 3 pontos</h4>
                 </div>
-        
+
                 <div class="Quadros5">
                     <h2>Rebotes por Partida:</h2>
-                    <h4>10 Rebotes</h4>
+                    <h4><span id="span_Rbts"></span> Rebotes</h4>
                 </div>
-        
+
                 <div class="Quadros6">
                     <h2>Assistências por Partida:</h2>
-                    <h4>10 Assistências</h4>
+                    <h4><span id="span_Ass"></span> Assistências</h4>
                 </div>
-        
+
                 <div class="Quadros7">
                     <h2>Roubos de Bola por Partida:</h2>
-                    <h4>10 Roubos de Bola</h4>
+                    <h4><span id="span_RB"></span> Roubos de Bola</h4>
                 </div>
-        
+
                 <div class="Quadros8">
                     <h2>Bloqueios por Partida:</h2>
-                    <h4>10 Bloqueios</h4>
+                    <h4><span id="span_BL"></span> Bloqueios</h4>
+                </div>
+
+                <div class="Quadros9">
+                    <h2>Camisa:</h2>
+                    <h4><span id="span_Camisa"></span></h4>
                 </div>
             </div>
 
-            <div id="graficos">
-                <div id="grafico1" class="display-block">
-                    <h3 class="tituloGraficos">
-                        <span id="tituloJogador">123</span>
-                    </h3>
-                    <div class="graphic">
-                        <canvas id="myChartCanvas"></canvas>
-                    </div>
-                    <div class="label-captura">
-                        <p id="avisoCaptura1" style="color: white"></p>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
-            
+
     </div>
 
     <!-- FOOTER -->
@@ -141,7 +132,12 @@
 
 <script>
 
+    var imagem = sessionStorage.ALLSTAR;
+
+    img_jogador.src = `./assets/${imagem}.png`
+
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
 
     function logado() {
 
@@ -167,4 +163,63 @@
         window.location = "../login.html";
 
     }
+
+    function dadosjogador(idAllStar) {
+        fetch(`/jogadores/dados/${idAllStar}`, {
+            method: "GET"
+        }).then(resposta => {
+
+            if (resposta.ok) {
+                resposta.json().then(json => {
+                    var JogosDisputados = json.JogosDisputados;
+                    var PontosPorPartida = json.PontosPorPartida;
+                    var ArremessosEmQuadra = json.ArremessosEmQuadra;
+                    var Arremessos3Pts = json.Arremessos3Pts;
+                    var RebotesPorPartida = json.RebotesPorPartida;
+                    var AssistênciasPorPartida = json.AssistênciasPorPartida;
+                    var RoubosDeBolaPorPartida = json.RoubosDeBolaPorPartida;
+                    var BloqueiosPorPartida = json.BloqueiosPorPartida;
+                    var Camisa = json.Camisa;
+                    span_JD.innerHTML = JogosDisputados;
+                    span_PtsPar.innerHTML = PontosPorPartida;
+                    span_Arr.innerHTML = ArremessosEmQuadra;
+                    span_Arr3Pts.innerHTML = Arremessos3Pts;
+                    span_Rbts.innerHTML = RebotesPorPartida;
+                    span_Ass.innerHTML = AssistênciasPorPartida;
+                    span_RB.innerHTML = RoubosDeBolaPorPartida;
+                    span_BL.innerHTML = BloqueiosPorPartida;
+                    span_Camisa.innerHTML = Camisa;
+
+
+                    var jogadoresCamisa = ["23", "6", "33", "32", "13", "6", "33", "21", "14", "24", "36", "7", "34", "6", "30"];
+
+                    for (var index = 0; index < jogadoresCamisa.length; index++) {
+
+                        if (camisa === jogadoresCamisa[index]) {
+                            img_jogador.src = `./assets/${imagem}.png`
+                            break;
+                        };
+
+                    };
+
+
+
+                })
+            } else {
+
+                console.log('Erro nos dados');
+                response.text().then(function (resposta) {
+
+                });
+
+
+            }
+
+
+        });
+
+        return false;
+    }
+
+
 </script>
