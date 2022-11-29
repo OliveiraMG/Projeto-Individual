@@ -97,9 +97,18 @@ function cadastrar(req, res) {
     }
 }
 
+function metrica(req, res) {
+    var fkAllStar = req.params.metrica;
+    usuarioModel.metrica(fkAllStar)
+        .then(function(resultado) {
+        res.json(resultado)         
+})
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    metrica
 }

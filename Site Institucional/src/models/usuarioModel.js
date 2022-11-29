@@ -31,8 +31,15 @@ function cadastrar(fkAllStar, nome, email, senha, nascimento) {
     return database.executar(instrucao);
 }
 
+function metrica(fkAllStar) {
+    var instrucao = `SELECT count(fkAllStar) as quantidade FROM USUARIO JOIN AllStar on idAllstar=fkAllStar where fkAllStar=${fkAllStar};`;
+
+    return database.executar(instrucao)
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    metrica
 };

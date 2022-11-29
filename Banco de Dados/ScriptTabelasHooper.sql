@@ -85,19 +85,7 @@ SELECT * FROM Usuario;
 SELECT * FROM AllStar;
 SELECT * FROM Estatistica;
 
-SELECT
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1001) as JogadorFavorito1,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1002) as JogadorFavorito2,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1003) as JogadorFavorito3,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1004) as JogadorFavorito4,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1005) as JogadorFavorito5,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1006) as JogadorFavorito6,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1007) as JogadorFavorito7,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1008) as JogadorFavorito8,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1009) as JogadorFavorito9,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1010) as JogadorFavorito10,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1011) as JogadorFavorito11,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1012) as JogadorFavorito12,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1013) as JogadorFavorito13,
-    (SELECT COUNT(*) FROM Usuario WHERE fkAllStar = 1014) as JogadorFavorito14;
+SELECT count(fkAllStar) FROM USUARIO JOIN AllStar on idAllstar=fkAllStar where fkAllStar= 1010;
+
+
     

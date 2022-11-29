@@ -50,6 +50,8 @@
             <h1>Hooper's Forever</h1>
             <h3>Aqui temos os dados do seu All-Star favorito.</h3>
 
+            <div class="div_msg"></div>
+
             <img id="img_jogador" src="" alt="" style="height: 250px;">
 
             <div class="btn-logout" onclick="limparSessao()">
@@ -135,9 +137,10 @@
     var imagem = sessionStorage.ALLSTAR;
 
     img_jogador.src = `./assets/${imagem}.png`
-
+    
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO
-
+    
+   
 
     function logado() {
 
@@ -153,6 +156,7 @@
             btnLogCad.innerHTML = ""
             document.getElementById('btnLogCad').style.visibility = 'hidden';
         }
+        
     }
 
     function limparSessao() {
@@ -163,6 +167,21 @@
         window.location = "../login.html";
 
     }
+
+    function metrica() {
+        var ALLSTARD = sessionStorage.ALLSTAR;
+
+        fetch(`/usuarios/metrica/${ALLSTARD}`,{
+        })
+        .then(function (response) {
+            response.json().then(function(json){
+                 div_msg.innerHTML = `Assim como você ${json[0].quantidade} usuários também escolheram esse All-Star`   
+            })
+        }).catch(function(erro){
+            console.log(erro)
+        })
+    }
+
 
     function dadosjogador(idAllStar) {
         fetch(`/jogadores/dados/${idAllStar}`, {
@@ -222,4 +241,5 @@
     }
 
 
+    metrica()
 </script>
